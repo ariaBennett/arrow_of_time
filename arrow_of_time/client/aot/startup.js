@@ -1,6 +1,11 @@
 aot.startup = {};
 
-aot.attachNoScroll = function(){
+aot.initSessions = function() {
+  Session.set('gameScreenWidth', '640');
+  Session.set('gameScreenHeight', '360');
+};
+
+aot.attachNoScroll = function() {
   window.onscroll = function() {
     window.scrollTo(0, 0)
   };
@@ -8,3 +13,4 @@ aot.attachNoScroll = function(){
 
 // Code execution
 aot.attachNoScroll();
+aot.initSessions();
